@@ -1,0 +1,81 @@
+LINQ o Language Integrated Query son un conjunto herramientas de Microsoft para realizar 
+todo tipo de consultas a distintas fuentes de datos: objetos, xmls, bases de datos, etc...
+ Para ello, usa un tipo de funciones propias, que unifica las operaciones más comunes en todos los entornos, 
+con esto, se consigue un mismo lenguaje para todo tipo de tareas con datos.
+
+LINQ en C#
+La sintaxis es parecida a la existente en SQL, pero con la ventaja de que tenemos la potencia de .net y visual studio a la hora de codificar. 
+Ahora vamos a ver un sencillo ejemplo, con una consulta linq en c# para objetos (LINQ to objetcs):
+
+var lista = from c in coleccion
+            where c.propiedad1 == true
+            select c;
+Como podemos ver, accedemos a una colección y filtramos todos los elementos que cumplan que la propiedad 1 sea verdadera. 
+Del resultado de esta consulta, podemos sacar un listado de elementos con ToList(), el número de ellos con un count(), extraer los datos a un array, etc...
+
+LINQ en vb.NET
+La sintaxis básica es parecida en vb.net en este tipo de sentencias, 
+pero para mi gusto menos cómoda cuando las sentencias se van complicando y sobre todo cuando haces uso de metodos directos empleando expresiones lambda.
+ Pero antes, veamos en que consiste este tipo de metodos.
+
+Operadores Lambda
+Aparte del metodo anterior para acceder a las operaciones de LINQ, podemos hacer uso de una sintaxis más directa a la hora de interactuar con LINQ. 
+Esto puede hacerse mediante expresiones de metodos apoyados por operadores lambda. Con ella, podemos llamar directamente a funciones where, join, select,
+ directamente desde el objeto.
+
+var lista_resultado = lista.where(c => c.id > 5).OrderBy(c => c);
+En solo una linea de código, hemos cogido un listado, lo hemos filtrado con una condición, y finalmente hemos ordenado los resultados.
+
+Operaciones linq
+Ejecución retardada
+Cuando declaramos una consulta en LinQ, podemos retardar su ejecución. La consulta del ejemplo anterior, ha sido en declarada en una variable anónima.
+ Al no haber sido usada en ninguna instrucción posterior, y no haber forzado su carga mediante el metodo ToList(), Select(), First(), etc... la consulta queda 
+declarada pero no lanzada. Esto puede ser contraproducente de no controlarse bien, pero a la vez puede ser muy útil en ciertos escenarios.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El nombre de Scala surge de la unión de dos palabras: scalable y language. Con esto ya sabemos qué objetivo tiene este lenguaje de programación 
+multiparadigma que combina propiedades de lenguajes funcionales con orientados a objetos.
+
+Un lenguaje de programación multiparadigma es aquel que permite al programador elegir diferentes "estilos" de desarrollo dependiendo del tipo de problema:
+ programación lógica, funcional, orientada a objetos...
+Integración con Java
+
+Scala se ejecuta sobre una máquina virtual Java, lo cual permite la integración de características o librerías entre ambos lenguajes. Es posible, entre otras cosas,
+ llamar a métodos de Java, heredar clases o implementar interfaces. Esta integración es recíproca, es decir, podemos utilizar Java en Scala y Scala en Java.
+
+Poder programar en ambos lenguajes al mismo tiempo es beneficioso para el desarrollador, ya que por ejemplo se podría utilizar Java como lenguaje principal
+ en un proyecto y en determinados casos escribir código en Scala.
+
+Diferencias con Java
+
+A pesar de tener similaridades como la orientación a objetos o ejecutarse sobre una JVM (Java Virtual Machine), también existen algunas diferencias entre
+ ambos lenguajes.
+
+La primera que encontramos es que con Scala se reducen drásticamente el número de líneas de código que se escribirán en un proyecto. Veremos cómo queda demostrado
+ a lo largo del curso. Además, Scala favorece la concurrencia y paralelización en la ejecución del código.
+
+Por otra parte, el código Java es más legible que el de Scala, aunque todo es acostumbrarse. En Scala podemos definir funciones dentro de funciones,
+ dentro de objetos que están dentro de una clase cualquiera. Puede ser algo enrevesado, pero también depende del programador y de la experiencia adquirida al
+ desarrollar. Otra importante diferencia es que Scala soporta la sobrecarga de operadores, característica que no encontramos en Java.
+
+Java, por su parte, trata todo como un objeto. Scala, sin embargo, trata todo como una variable. Es por esto que veremos cómo se puede pasar una función como
+parámetro a otra función.
+
+Herramientas para el curso
+Primero se explicarán los conceptos básicos haciendo uso de la shell de Scala. Es bastante útil para comenzar, pero llega un momento en el que hay que dar el salto
+ a un entorno de desarrollo que nos ofrezca funcionalidades adicionales. Debido a esto, utilizaré IntelliJ Idea. Actualmente en su versión 14, es posible descargarlo 
+desde su Web para probarlo durante 30 días y, para estudiantes hay una licencia gratuita durante un año.
+
+Cada alumno puede utilizar el IDE que quiera. Aprenderemos a configurar varios. Seguramente Eclipse, NetBeans e IntelliJ Idea.
+Desarrollo del curso
+El curso se va a dividir en varias partes. No quiero hacer artículos largos y difíciles de leer. Como siempre, intentaré que haya equilibrio entre teoría y práctica,
+ decantando la balanza hacia el lado práctico, por supuesto.
+
+Siguiente artículo
+
+En el siguiente artículo aprenderemos a instalar Scala en Windows, GNU/Linux y MAC OS X. Tras ello, configuraremos distintos entornos de desarrollo.
+ Si queda un artículo largo, lo dividiré en varias partes.
+
+Si no podemos aprender un nuevo lenguaje de programación, por complicado que sea, nos hemos equivocado de profesión.
